@@ -3,7 +3,7 @@ import bookfinder
 
 app = Flask(__name__)
 
-@app.route('/search/<string:bookQuery>')
+@app.route('/search?q=<string:bookQuery>')
 def query(bookQuery):
     book = bookfinder.search(bookQuery)
     return jsonify(book)
