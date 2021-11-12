@@ -39,5 +39,5 @@ def search(query):
     apiResponse[count]['filelink'] = str(fileLink)
     apiResponse[count]['authorname'] = str(authorName)
     count += 1
-  apiResponse['num'] = count
+  apiResponse = {'count':count, 'results':apiResponse}
   return apiResponse
