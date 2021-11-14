@@ -37,7 +37,7 @@ def search(query):
     except:
       authorName = "Anonymous"
     apiResponse[count] = {}
-    altL = bsoup.find_all("a")
+    altL = nisoup.find_all("a")
     c = 0
     altLinks = []
     try:
