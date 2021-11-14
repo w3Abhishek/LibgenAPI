@@ -42,8 +42,8 @@ def search(query):
     altLinks = []
     try:
       for i in range(1,6):
-      altLinks[count] = altL[i]['href']
-      c += 1
+        altLinks[count] = altL[i]['href']
+        c += 1
     except:
       altLinks = []
     apiResponse[count]['altlinks'] = altLinks
