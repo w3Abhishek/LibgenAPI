@@ -47,7 +47,7 @@ def search(query):
     apiResponse[count]['bookname'] = str(bookName)
     apiResponse[count]['filelink'] = str(fileLink)
     apiResponse[count]['authorname'] = str(authorName)
-    apiResponse[count]['cover'] = str(bookcover[0]['src'])
+    apiResponse[count]['cover'] = str(bookcover)
     count += 1
   apiResponse = {'count':count, 'results':apiResponse}
   return apiResponse
