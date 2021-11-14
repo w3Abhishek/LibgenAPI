@@ -38,13 +38,16 @@ def search(query):
       authorName = "Anonymous"
     apiResponse[count] = {}
     altLinks = []
-    for i in range(1, 5):
-      altLinks[i-1] = altL[i]['href']
+    try:
+      for i in range(1, 4):
+        altLinks[i-1] = altL[i]['href']
+    except:
+      altLinks = []
     apiResponse[count]['altlinks'] = altLinks
     apiResponse[count]['bookname'] = str(bookName)
     apiResponse[count]['filelink'] = str(fileLink)
     apiResponse[count]['authorname'] = str(authorName)
-    apiResponse[count]['cover'] = str(bookcover[0]['src'])
+    apiResponse[count]['cover'] = str(bookcover)
     count += 1
   apiResponse = {'count':count, 'results':apiResponse}
   return apiResponse
