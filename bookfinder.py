@@ -30,14 +30,21 @@ def search(query):
     pageres = str(nisoup.h2)
     bookName = nisoup.h1.text
     fileLink = pageres.split('"')[1]
+    bookcover = "http://library.lol/" + str(nisoup.img['src'])
+    altL = nisoup.find_all("a")
     try:
       authorName = bookDetails[0].text.replace('Author(s): ', '')
     except:
       authorName = "Anonymous"
     apiResponse[count] = {}
+    altLinks = []
+    for i in range(1, 5):
+      altLinks[i-1] = altL[i]['href']
+    apiResponse[count]['altlinks'] = altLinks
     apiResponse[count]['bookname'] = str(bookName)
     apiResponse[count]['filelink'] = str(fileLink)
     apiResponse[count]['authorname'] = str(authorName)
+    apiResponse[count]['cover'] = str(bookcover[0]['src'])
     count += 1
   apiResponse = {'count':count, 'results':apiResponse}
   return apiResponse
