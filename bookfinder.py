@@ -37,10 +37,13 @@ def search(query):
     except:
       authorName = "Anonymous"
     apiResponse[count] = {}
+    altL = bsoup.find_all("a")
+    c = 0
     altLinks = []
     try:
-      for i in range(1, 4):
-        altLinks[i-1] = altL[i]['href']
+      for i in range(1,6):
+      altLinks[count] = altL[i]['href']
+      c += 1
     except:
       altLinks = []
     apiResponse[count]['altlinks'] = altLinks
