@@ -38,7 +38,7 @@ def search(query):
       authorName = "Anonymous"
     apiResponse[count] = {}
     altLinks = []
-    for i in range(1, 5):
+    for i in range(1, 4):
       altLinks[i-1] = altL[i]['href']
     apiResponse[count]['altlinks'] = altLinks
     apiResponse[count]['bookname'] = str(bookName)
