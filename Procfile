@@ -1,1 +1,1 @@
-web: gunicorn app:LibgenAPI
+web: gunicorn app:app
