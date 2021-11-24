@@ -74,5 +74,5 @@ def getBook(query):
         coverLink = nisoup.find('img')['src']
     except:
         coverLink = ''
-    result = {'cover':coverLink, filelink':mainLink, 'altLinks':[allLinks[1]['href'], allLinks[2]['href'], allLinks[3]['href'], allLinks[4]['href']]}
+    result = {'cover':coverLink, 'filelink':mainLink, 'altLinks':[allLinks[1]['href'], allLinks[2]['href'], allLinks[3]['href'], allLinks[4]['href']]}
     return result
