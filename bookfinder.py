@@ -70,5 +70,6 @@ def getBook(query):
     nisoup = BeautifulSoup(r.text, 'html.parser')
     allLinks = nisoup.find_all('a')
     mainLink = allLinks[0]['href']
-    result = {'filelink':mainLink, 'altLinks':[allLinks[1]['href'], allLinks[2]['href'], allLinks[3]['href'], allLinks[4]['href']]}
+    coverLink = nisoup.find('img')['src']
+    result = {'cover':coverLink, filelink':mainLink, 'altLinks':[allLinks[1]['href'], allLinks[2]['href'], allLinks[3]['href'], allLinks[4]['href']]}
     return result
