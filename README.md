@@ -1,5 +1,8 @@
 # LibgenAPI
 ![](https://raw.githubusercontent.com/w3Abhishek/LibgenAPI/main/LIBGENAPI.png)
+
+## LibgenAPI
+
 Unofficial API for Library Genesis.
 
 /search/<search_query> - to search Library Genesis
