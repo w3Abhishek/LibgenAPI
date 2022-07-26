@@ -17,6 +17,7 @@ DM me on Twitter: [@w3Abhishek](https://twitter.com/w3Abhishek)
 
 Fork to contribute and create a pull request. Any improvement is welcome.
 
-For any legal queries, mail me abhishek@droidmaze.com
+For any legal queries, mail me me@theabhishek.dev
+
 
 Thanks.
